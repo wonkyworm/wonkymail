@@ -7,7 +7,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
-
   <style>
     body {
       background-color: white;
@@ -22,7 +21,8 @@
     }
 
     .logo {
-      width: 150px; /* Adjust size as needed */
+      max-width: 150px; /* Adjust size as needed */
+      width: 50%; /* Make logo responsive */
       border-radius: 8px; /* Rounded corners like .text-content */
       margin-bottom: 20px;
     }
@@ -30,23 +30,24 @@
     h1 {
       color: #3377FF; /* Vibrant Blue */
       font-weight: 700;
-      font-size: 4em;
+      font-size: 2em; /* Adjusted for mobile */
       margin-bottom: 10px;
     }
 
-    .tagline {
-      color: rgba(0, 0, 0, 0.8); /* 80% black */
-      font-weight: 600; /* Semi-bold */
+    .tagline, .standout {
+      color: rgba(0, 0, 0, 0.8);
+      font-weight: 600; /* Semi-bold for tagline */
       font-size: 1.2em;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
 
     .text-content { 
-      max-width: 600px; 
-      margin: 0 auto 30px auto;
+      width: 90%; /* Responsive width */
+      max-width: 600px; /* Maximum width */
+      margin: 0 auto;
       padding: 20px;
-      border-radius: 8px;       
-      background-color: #f8f8f8; 
+      border-radius: 8px;
+      background-color: #f8f8f8;
       box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     }
 
@@ -55,16 +56,33 @@
       font-size: 1em;
       line-height: 1.6em;  
       margin-bottom: 15px; 
+      font-weight: 300; /* Lighter font weight for paragraph text */
     }
 
-    .standout { /* Style for standout lines */
-      font-weight: 700; 
-      margin-top: 20px; 
-    }
-    
     .emoji { /* Style for larger emojis */
       font-size: 1.5em; /* Larger emoji size */
       vertical-align: middle; /* Aligns emoji with the middle of the text */
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.5em; /* Smaller on very small screens */
+      }
+
+      .logo {
+        max-width: 120px; /* Smaller logo on small screens */
+        width: 40%;
+      }
+
+      .text-content, .tagline, .standout {
+        font-size: 0.9em; /* Slightly smaller text for small screens */
+      }
+
+      iframe {
+        width: 100%; /* Make iframe responsive */
+        height: auto; /* Adjust height automatically */
+        min-height: 400px; /* Minimum height */
+      }
     }
   </style>
 </head>
@@ -77,9 +95,7 @@
     <p>Our platform might be quirky, but we promise it's crafted with care and innovation. Expect surprises that delight and features that empower.</p>
     <p>We're currently in closed Alpha, so hang tight! <span class="standout">But don't despair—</span>we're gearing up to welcome Beta users very soon! <span class="emoji">❤️</span> Stay tuned and ready for an email experience like no other.</p>
     <p>In the meantime, meet our mascot, Wonky Winston, the pixelated pigeon above. He's a bit wonky, just like us, but always delivers.</p>
-    <!-- Excited? Join our waitlist -->
     <p class="standout">Excited? Join our waitlist to be the first to know when we launch!</p>
-    <!-- Embed Google Form Here -->
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSde19djCpWWdes9E3RRE2cZU5x28UGMcW_JZLDrbKMemym-4w/viewform?embedded=true" width="640" height="844" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   </div>
 </body>
